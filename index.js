@@ -168,7 +168,7 @@ var AvatarEditor = React.createClass({
     },
 
     componentDidMount() {
-        var context = ReactDOM.findDOMNode(this.refs.canvas).getContext('2d');
+        var context = this.refs.canvas.getContext('2d');
         if (this.props.image) {
             this.loadImage(this.props.image);
         }
@@ -199,7 +199,7 @@ var AvatarEditor = React.createClass({
     },
 
     componentDidUpdate() {
-        var context = ReactDOM.findDOMNode(this.refs.canvas).getContext('2d');
+        var context = this.refs.canvas.getContext('2d');
         context.clearRect(0, 0, this.getDimensions().canvas.width, this.getDimensions().canvas.height);
         this.paint(context);
         this.paintImage(context, this.state.image, this.props.border);
