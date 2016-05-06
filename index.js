@@ -393,7 +393,9 @@ var AvatarEditor = React.createClass({
 
     render() {
         var defaultStyle = {
-            cursor: this.state.drag? 'grabbing' : 'grab'
+            cursor: this.state.drag ? 'grabbing' : 'grab',
+            cursor: this.state.drag ? '-moz-grabbing' : '-moz-grab',
+            cursor: this.state.drag ? '-webkit-grabbing' : '-webkit-grab'
         };
     
         var attributes = {
